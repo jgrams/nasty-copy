@@ -10,18 +10,29 @@ class InterestForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+	handleChange(event) {
+
+	}
+
+	handleSubmit(event) {
+
+	}
+
 	render() {
 		return(
 			<form onSubmit={this.handleSubmit}>
 				<label>
-					Email:
-					<input type="text" value={this.state.value} onChange={this.handleChange} />
+					Your Email:
+					<input type="text" value={this.state.email} onChange={this.handleChange} />
 				</label>
 				<label>
 					What's Wrong:
 					<input type="text" value={this.state.situation} onChange={this.handleChange} />
 				</label>
-				<input type="submit" value="Submit">
+				<input type="submit" value="Submit" />
+			</form>
 		)
 	}
 }
+
+export default InterestForm;

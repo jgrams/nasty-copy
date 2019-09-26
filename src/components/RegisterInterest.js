@@ -1,4 +1,5 @@
 import React from 'react';
+import InterestForm from './InterestForm'
 
 class RegisterInterest extends React.Component {
 	render() {
@@ -6,7 +7,7 @@ class RegisterInterest extends React.Component {
 			<div className='submit'>
 				<h1>I want to humiliate my enemies.</h1>
 				<h7>And I'm willing to share personal information.</h7>
-				<textfield></textfield>
+				<InterestForm />
 			</div>
 		)
 	}
