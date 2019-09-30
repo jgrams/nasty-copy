@@ -18,6 +18,11 @@
 
 .card-container {
   display: flex;
+  justify-content: center;
+}
+
+.card-button {
+  border-radius: 6px;
 }
 
 .green {
