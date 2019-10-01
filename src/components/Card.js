@@ -11,7 +11,7 @@ class Card extends React.Component {
 						</text>
 					</div>
 					<button className='card-button'>
-						<text className={'card-button-text'}>
+						<text className={'card-button-text ' + this.props.color + '-text'}>
 							{this.props.text}
 						</text>
 					</button>

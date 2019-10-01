@@ -68,3 +68,15 @@
 .blue {
   background-color: rgb(26, 148, 203);
 }
+
+.green-text {
+  color: rgb(0, 102, 30);
+}
+
+.teal-text {
+  color: rgb(0, 102, 102);
+}
+
+.blue-text {
+  color: rgb(0, 70, 102);
+}
