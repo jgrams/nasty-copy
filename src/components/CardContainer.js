@@ -4,15 +4,18 @@ import Card from './Card'
 class CardContainer extends React.Component {
 	render() {
 		const colors = [{color: 'green',
-	                     text: 'Yes, once.'}, 
+	                     text: 'Once.',
+	                     headerText: 'Yes'}, 
 	                    {color: 'teal',
-	                     text: 'Yes, many times.'}, 
+	                     text: 'Many times.',
+	                     headerText: 'Yes'}, 
 	                    {color: 'blue',
-	                     text: "No, I'm grumpy"}];
+	                     text: "I'm grumpy",
+	                     headerText: 'No'}];
 		return(
-			<div className="card-container">
+			<div className="cards-container">
 				{colors.map((value, index) => {
-					return <Card key={index} color={value.color} text={value.text} />
+					return <Card key={index} color={value.color} text={value.text} headerText={value.headerText}/>
 				})}
 			</div>
 		)
