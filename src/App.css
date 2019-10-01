@@ -16,14 +16,40 @@
   color: #09d3ac;
 }
 
-.card-container {
+.cards-container {
   display: flex;
   justify-content: center;
+  width: 45vw;
+}
+
+.card-container {
+  width: 31%;
+  border-radius: 6px;
+  background: #fff;
+  margin: 0px 8px;
+}
+
+.card {
+  padding: 20px;
 }
 
 .card-button {
   border-radius: 6px;
 }
+
+.card-header {
+  height: 4vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header-text {
+  color: #fff;
+  font-weight: 600;
+}
+
 
 .green {
   background-color: rgb(95, 207, 128);
