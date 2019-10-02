@@ -5,10 +5,13 @@ class Card extends React.Component {
 		return(
 			<div className='card-container'>
 				<div className="card">
-					<div className={this.props.color + " card-header"}>
+					<div className={this.props.color + " card-header"} alt="Square Button">
 						<text className="card-header-text">
 							{this.props.headerText}
 						</text>
+					</div>
+					<div className='card-text'>
+
 					</div>
 					<button className='card-button'>
 						<text className={'card-button-text ' + this.props.color + '-text'}>
