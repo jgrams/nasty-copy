@@ -21,7 +21,7 @@ class FlowerContainer extends React.Component {
 		                  altText: "Purple"},
 		                 {src: pinkflower,
 		                  altText: "Pink"}];
-		const numberFlowers = 25;
+		const numberFlowers = 9;
 		const min = Math.ceil(0);
 		const max = Math.floor(flowers.length);
 		

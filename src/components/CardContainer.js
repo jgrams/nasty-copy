@@ -19,11 +19,11 @@ class CardContainer extends React.Component {
                         bodyHeader: '',
 	                    bodyText: ''}];
 		return(
-			<div className="cards-container">
+			<main className="cards-container">
 				{cards.map((value, index) => {
 					return <Card key={index} color={value.color} text={value.text} headerText={value.headerText}/>
 				})}
-			</div>
+			</main>
 		)
 	}
 }

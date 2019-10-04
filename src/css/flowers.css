@@ -1,0 +1,21 @@
+.flowers-container{
+	display: flex;
+  align-items: center;
+	max-width: 100%;
+	margin: 1vw;
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(7deg);}
+  25% {transform: rotate(-7deg);}
+  50% {transform: rotate(4deg);}
+  75% {transform: rotate(-4deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.flower-image:hover {
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+}
