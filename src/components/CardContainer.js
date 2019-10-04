@@ -4,26 +4,31 @@ import Card from './Card'
 class CardContainer extends React.Component {
 	render() {
 		const cards = [{color: 'green',
-	                    text: 'Once.',
 	                    headerText: 'Yes',
-	                    bodyHeader: '',
-	                    bodyText: ''}, 
+	                    bodyHeader: 'It was',
+	                    bodyText: 'infuriating.',
+	                    buttonText: 'Once.'}, 
 	                   {color: 'teal',
-	                    text: 'Many times.',
 	                    headerText: 'Yes',
-	                    bodyHeader: '',
-	                    bodyText: ''}, 
+	                    bodyHeader: 'I know',
+	                    bodyText: 'the patience of revenge.',
+	                    buttonText: 'Many times.'}, 
 	                   {color: 'blue',
-	                    text: "I'm grumpy",
                         headerText: 'No',
-                        bodyHeader: '',
-	                    bodyText: ''}];
+                        bodyHeader: 'But,',
+	                    bodyText: 'somehow.',
+	                    buttonText: "I'm grumpy",}];
 		return(
-			<main className="cards-container">
+			<div className="cards-container">
 				{cards.map((value, index) => {
-					return <Card key={index} color={value.color} text={value.text} headerText={value.headerText}/>
+					return <Card key={index} 
+					             color={value.color} 
+					             buttonText={value.buttonText} 
+					             headerText={value.headerText} 
+					             bodyHeader={value.bodyHeader}
+					             bodyText={value.bodyText}/>
 				})}
-			</main>
+			</div>
 		)
 	}
 }

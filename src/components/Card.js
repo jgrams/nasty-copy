@@ -10,12 +10,15 @@ class Card extends React.Component {
 							{this.props.headerText}
 						</text>
 					</div>
-					<div className='card-text'>
-
+					<div className='card-text-header'>
+						{this.props.bodyHeader}
+					</div>
+					<div className='card-text-body'>
+						{this.props.bodyText}
 					</div>
 					<button className='card-button'>
 						<text className={'card-button-text ' + this.props.color + '-text'}>
-							{this.props.text}
+							{this.props.buttonText}
 						</text>
 					</button>
 				</div>
