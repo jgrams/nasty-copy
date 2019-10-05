@@ -17,14 +17,14 @@ class CardContainer extends React.Component {
                         headerText: 'No',
                         bodyHeader: 'But,',
 	                    bodyText: 'somehow.',
-	                    buttonText: "I'm grumpy",}];
+	                    buttonText: "I'm grumpy"}];
 		return(
 			<div className="cards-container">
 				{cards.map((value, index) => {
 					return <Card key={index} 
 					             color={value.color} 
-					             buttonText={value.buttonText} 
 					             headerText={value.headerText} 
+					             buttonText={value.buttonText} 
 					             bodyHeader={value.bodyHeader}
 					             bodyText={value.bodyText}/>
 				})}

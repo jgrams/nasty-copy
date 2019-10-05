@@ -3,7 +3,6 @@ import React from 'react';
 class Card extends React.Component {
 	render() {
 		return(
-			<div className='card-container'>
 				<div className="card">
 					<div className={this.props.color + " card-header"} alt="Square Button">
 						<text className="card-header-text">
@@ -22,7 +21,6 @@ class Card extends React.Component {
 						</text>
 					</button>
 				</div>
-			</div>
 		)
 	}
 }
