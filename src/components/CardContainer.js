@@ -30,7 +30,7 @@ class CardContainer extends React.Component {
 	                    bodyText: 'cover the',
 	                    buttonText: 'Feeling.'}];
 		return(
-			<div className="cards-container flex-row flex-align-center">
+			<div className="cards-container flex-row flex-justify-center">
 				{cards.map((value, index) => {
 					return <Card key={index} 
 					             color={value.color} 
