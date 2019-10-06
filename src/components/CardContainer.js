@@ -18,8 +18,19 @@ class CardContainer extends React.Component {
                         bodyHeader: 'But,',
 	                    bodyText: 'somehow.',
 	                    buttonText: "I'm grumpy"}];
+
+	    const onceOption = [{color: 'green',
+	                    headerText: 'Forgivness',
+	                    bodyHeader: 'Might',
+	                    bodyText: 'be.',
+	                    buttonText: 'Best.'}, 
+	                   {color: 'teal',
+	                    headerText: 'Infuriating',
+	                    bodyHeader: "Doesn't quite",
+	                    bodyText: 'cover the',
+	                    buttonText: 'Feeling.'}];
 		return(
-			<div className="cards-container">
+			<div className="cards-container flex-row flex-align-center">
 				{cards.map((value, index) => {
 					return <Card key={index} 
 					             color={value.color} 

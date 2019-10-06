@@ -1,8 +1,5 @@
 .flowers-container{
-	display: flex;
-  align-items: center;
 	max-width: 100%;
-	margin: 1vw;
 }
 
 @keyframes wiggle {

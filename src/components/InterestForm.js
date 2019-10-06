@@ -19,7 +19,7 @@ class InterestForm extends React.Component {
 
 	render() {
 		return(
-			<form className="interest-form" onSubmit={this.handleSubmit}>
+			<form className="interest-form flex-column flex-align-center" onSubmit={this.handleSubmit}>
 				<label>
 					Your Email:
 					<input type="text" value={this.state.email} onChange={this.handleChange} />

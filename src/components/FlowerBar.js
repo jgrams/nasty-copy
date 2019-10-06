@@ -38,7 +38,7 @@ class FlowerContainer extends React.Component {
 		}
 
 		return(
-			<div className="flowers-container" >
+			<div className="flowers-container flex-row" >
 				{displayFlowers}
 			</div>
 		)
