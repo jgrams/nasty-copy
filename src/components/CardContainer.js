@@ -13,32 +13,50 @@ function CardContainer() {
 	                    bodyHeader: 'I know',
 	                    bodyText: 'the patience of revenge.',
 	                    buttonText: 'Many times.',
-	                    targetCards : 1}, 
+	                    targetCards : 2}, 
 	                   {color: 'blue',
 	                    headerText: 'No',
 	                    bodyHeader: 'But,',
 	                    bodyText: 'somehow.',
 	                    buttonText: "I'm grumpy",
-	                    targetCards : 1}],
-	               1: [{color: 'green',
-	                    headerText: 'Forgivness',
-	                    bodyHeader: 'Might',
-	                    bodyText: 'be.',
-	                    buttonText: 'Best.',
-	                    targetCards : 0}, 
+	                    targetCards : 3}],
+	               1: [returnForgivenessCard(), 
 	                   {color: 'teal',
 	                    headerText: 'Infuriating',
 	                    bodyHeader: "Doesn't quite",
 	                    bodyText: 'cover the',
 	                    buttonText: 'Feeling.',
-	                    targetCards : 0}]};
+	                    targetCards : 0}],
+	               2: [returnForgivenessCard(), 
+	                   {color: 'teal',
+	                    headerText: 'This sounds',
+	                    bodyHeader: "Serious.",
+	                    bodyText: 'The only person I can control.',
+	                    buttonText: 'Is myself.',
+	                    targetCards : 3}],
+                   3: [returnForgivenessCard(), 
+                       {color: 'teal',
+                        headerText: 'Infuriating',
+                        bodyHeader: "Doesn't quite",
+                        bodyText: 'cover the',
+                        buttonText: 'Feeling.',
+                        targetCards : 0}]};
 
     const onceOption = [];
-    const [displayedCard, setCard] = useState(0);
+    const [displayedCardIndex, setCard] = useState(0);
+
+    function returnForgivenessCard(color) {
+    	return {color: color ? color : 'green',
+                headerText: 'Forgivness',
+                bodyHeader: 'Might',
+                bodyText: 'be.',
+                buttonText: 'Best.',
+                targetCards : 0};
+    };
 
 	return(
-		<div className="cards-container flex-row flex-justify-center">
-			{cards[displayedCard].map((value, index) => {
+		<div className="cards-container row justify-center">
+			{cards[displayedCardIndex].map((value, index) => {
 				return <Card key={index} 
 				             color={value.color} 
 				             headerText={value.headerText} 

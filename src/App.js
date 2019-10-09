@@ -10,7 +10,7 @@ import FlowerBar from './components/FlowerBar';
 
 function App() {
   return (
-    <div className="App flex-column">
+    <div className="App column">
         <InteractivePanel />
         <FlowerBar />
         <RegisterInterest />
