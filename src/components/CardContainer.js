@@ -7,34 +7,35 @@ function CardContainer() {
 	                    bodyHeader: 'It was',
 	                    bodyText: 'infuriating.',
 	                    buttonText: 'Once.',
-	                    targetCardSet : 1}, 
+	                    targetCards : 1}, 
 	                   {color: 'teal',
 	                    headerText: 'Yes',
 	                    bodyHeader: 'I know',
 	                    bodyText: 'the patience of revenge.',
 	                    buttonText: 'Many times.',
-	                    targetCardSet : 1}, 
+	                    targetCards : 1}, 
 	                   {color: 'blue',
 	                    headerText: 'No',
 	                    bodyHeader: 'But,',
 	                    bodyText: 'somehow.',
 	                    buttonText: "I'm grumpy",
-	                    targetCardSet : 1}],
+	                    targetCards : 1}],
 	               1: [{color: 'green',
-	                     headerText: 'Forgivness',
-	                     bodyHeader: 'Might',
-	                     bodyText: 'be.',
-	                     buttonText: 'Best.',
-	                     targetCardSet : 0}, 
-	                    {color: 'teal',
-	                     headerText: 'Infuriating',
-	                     bodyHeader: "Doesn't quite",
-	                     bodyText: 'cover the',
-	                     buttonText: 'Feeling.',
-	                     targetCardSet : 0}]};
+	                    headerText: 'Forgivness',
+	                    bodyHeader: 'Might',
+	                    bodyText: 'be.',
+	                    buttonText: 'Best.',
+	                    targetCards : 0}, 
+	                   {color: 'teal',
+	                    headerText: 'Infuriating',
+	                    bodyHeader: "Doesn't quite",
+	                    bodyText: 'cover the',
+	                    buttonText: 'Feeling.',
+	                    targetCards : 0}]};
 
     const onceOption = [];
     const [displayedCard, setCard] = useState(0);
+
 	return(
 		<div className="cards-container flex-row flex-justify-center">
 			{cards[displayedCard].map((value, index) => {
@@ -43,7 +44,8 @@ function CardContainer() {
 				             headerText={value.headerText} 
 				             buttonText={value.buttonText} 
 				             bodyHeader={value.bodyHeader}
-				             bodyText={value.bodyText}/>
+				             bodyText={value.bodyText}
+				             onClick = {() => setCard(value.targetCards)}/>
 			})}
 		</div>
 	)
