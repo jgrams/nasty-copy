@@ -1,38 +1,22 @@
 import React from 'react'
 
 class InterestForm extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {email: '',
-	                  sitatuion: ''};
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-	handleChange(event) {
-
-	}
-
-	handleSubmit(event) {
-
-	}
-
 	render() {
 		return(
-			<form className="interest-form column align-center" onSubmit={this.handleSubmit}>
+			<form className="interest-form column align-center" onSubmit="return false">
 				<label>
 					Your Email:
-					<input type="text" value={this.state.email} onChange={this.handleChange} />
+					<input type="text" />
 				</label>
 				<label>
 					What's Wrong:
-					<input type="text" value={this.state.situation} onChange={this.handleChange} />
+					<input type="text" />
 				</label>
 				<label>
 					I Promise To Pay Money:
-					<input type="checkbox" value={this.state.situation} onChange={this.handleChange} />
+					<input type="checkbox" />
 				</label>
-				<input type="submit" value="Submit" />
+				<input type="submit" action="/api/post" method="POST" value="Submit" />
 			</form>
 		)
 	}

@@ -36,10 +36,10 @@ function CardContainer() {
 	                    targetCards : 3}],
                    3: [returnForgivenessCard(), 
                        {color: 'teal',
-                        headerText: 'Infuriating',
-                        bodyHeader: "Doesn't quite",
-                        bodyText: 'cover the',
-                        buttonText: 'Feeling.',
+                        headerText: 'I Don\'t know what came over me',
+                        bodyHeader: "but It",
+                        bodyText: 'wasn\'t',
+                        buttonText: 'Right.',
                         targetCards : 0}]};
 
     const onceOption = [];
