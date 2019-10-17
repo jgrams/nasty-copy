@@ -5,9 +5,9 @@ class Card extends React.Component {
 		return(
 				<div className="card column align-center">
 					<div className={this.props.color + " card-header"} alt="Square Button">
-						<text className="card-header-text tall-line">
+						<div className="card-header-text tall-line">
 							{this.props.headerText}
-						</text>
+						</div>
 					</div>
 					<div className='card-text-header'>
 						{this.props.bodyHeader}
@@ -16,9 +16,9 @@ class Card extends React.Component {
 						{this.props.bodyText}
 					</div>
 					<button className='card-button' onClick={this.props.onClick}>
-						<text className={'card-button-text tall-line ' + this.props.color + '-text'}>
+						<div className={'card-button-text tall-line ' + this.props.color + '-text'}>
 							{this.props.buttonText}
-						</text>
+						</div>
 					</button>
 				</div>
 		)
