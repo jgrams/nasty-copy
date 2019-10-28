@@ -11,12 +11,8 @@ app.post('/api/create', (req, res) => res.send('Hello World!'))
 app.listen(port, () => console.log(`Express server at port ${port}!`))
 
 var mysql = require('@mysql/xdevapi');
+var config = require('./database/config/dev.json')
 
-var config = {
-  host: "localhost",
-  user: "root",
-  password: "Don'tEverBeTooMean"
-};
 
 mysql.getSession(config)
      .then(session => {
