@@ -3,13 +3,14 @@ import React from 'react'
 function InterestForm () {
 	function handleSubmit (e) {
 		e.preventDefault()
-		const data = new FormData(e.target) 
-		var xhr = new XMLHttpRequest()
-		xhr.open('POST', '/api/create', true)
+		console.log(e.target)
+		const data = new FormData(e.target)
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/api/create', true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 		xhr.onreadystatechange = function() {
 			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-
+				
 			}
 		}
 		xhr.send(JSON.stringify(data))
@@ -25,7 +26,7 @@ function InterestForm () {
 			
 			<label htmlFor="willpay" >I Promise To Pay Money:</label>
 			<input name="willpay" type="checkbox" />
-			
+
 			<button>Submit</button>
 		</form>
 	)

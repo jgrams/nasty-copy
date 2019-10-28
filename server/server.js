@@ -1,15 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
-var mysql = require('@mysql/xdevapi');
-var config = require('../database/config/dev.json')
-var createDatabase = require('../database/migrations/createdatabase.json')
-
+const mysql = require('@mysql/xdevapi');
+const config = require('../database/config/dev.json')
+const createDatabase = require('../database/migrations/createdatabase.json')
 const app = express()
 const port = process.env.Port || 8080
 
 app.use(express.static(path.join(__dirname, '../build')));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build', 'index.html')))
+
+
 mysql.getSession(config)
      .then(session => {
      	session.sql(createDatabase.create)
@@ -17,7 +18,21 @@ mysql.getSession(config)
      	session.sql(createDatabase.submissions)
      	       .execute();
      })
-app.post('/api/create', (req, res) => 
-	         mysql.getSession(config)
-	              .thenres.send('Hello World!'))
+
+
+app.post('/api/create', (req, res) => { 
+			mysql
+			  .getSession(config)
+			  .then(function (session) {
+			    // Accessing an existing table
+			    myTable = session.getSchema('nastycopy').getTable('submissions');
+
+			    // Insert SQL Table data
+			    return myTable
+			      .insert(['email', 'grievance', 'paywilling'])
+			      .values(['Laurie', '2000-5-27', 1])
+			      .execute()
+			  });
+	         res.send('Post Successful!');
+	    });
 app.listen(port, () => console.log(`Express server at port ${port}!`))
