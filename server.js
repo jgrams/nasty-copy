@@ -10,4 +10,17 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.htm
 app.post('/api/create', (req, res) => res.send('Hello World!'))
 app.listen(port, () => console.log(`Express server at port ${port}!`))
 
+var mysql = require('@mysql/xdevapi');
+
+var config = {
+  host: "localhost",
+  user: "root",
+  password: "Don'tEverBeTooMean"
+};
+
+mysql.getSession(config)
+     .then(session => {
+     	console.log(session.inspect());
+     })
+
 
