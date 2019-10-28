@@ -1,0 +1,4 @@
+{
+ "create": "CREATE DATABASE IF NOT EXISTS nastycopy",
+ "submissions": "CREATE TABLE IF NOT EXISTS nastycopy.submissions(email TEXT, grievance MEDIUMTEXT, paywilling TINYINT(1))"
+}
