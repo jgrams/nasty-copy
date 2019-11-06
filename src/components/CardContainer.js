@@ -41,8 +41,6 @@ function CardContainer() {
                         bodyText: 'wasn\'t',
                         buttonText: 'Right.',
                         targetCards : 0}]};
-
-    const onceOption = [];
     const [displayedCardIndex, setCard] = useState(0);
 
     function returnForgivenessCard(color) {
