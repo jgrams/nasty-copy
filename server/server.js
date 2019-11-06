@@ -21,6 +21,7 @@ mysql.getSession(config)
 
 
 app.post('/api/create', (req, res) => { 
+	console.log(req);
 			mysql
 			  .getSession(config)
 			  .then(function (session) {
