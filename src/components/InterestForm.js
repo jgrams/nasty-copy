@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function InterestForm () {
+	const [email, setEmail] = useState('');
+	const [wrong, setWrong] = useState('');
+	const [willpay, setWillPay] = useState(0);
+
 	function handleSubmit (e) {
 		e.preventDefault()
 		console.log(e.target)
-		const data = new FormData(e.target)
 		var xhr = new XMLHttpRequest();
+		const data = new FormData(e.target)
 		xhr.open('POST', '/api/create', true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 		xhr.onreadystatechange = function() {
@@ -18,15 +22,18 @@ function InterestForm () {
 
 	return(
 		<form onSubmit={handleSubmit} className="interest-form column align-center">
-			<label htmlFor="email">Your Email:</label>
-			<input name="email" type="email" />
-			
-			<label htmlFor="wrong">What's Wrong:</label>
-			<input name="wrong" type="text" />
-			
-			<label htmlFor="willpay" >I Promise To Pay Money:</label>
-			<input name="willpay" type="checkbox" />
-
+			<div className="row">
+				<label htmlFor="email">Your Email:</label>
+				<input name="email" type="email" value={ email } onChange={ setEmail} />
+			</div>
+			<div className="row">
+				<label htmlFor="wrong">What's Wrong:</label>
+				<input name="wrong" type="text" value={ wrong } onChange={ setWrong} />
+			</div>
+			<div className="row">
+				<label htmlFor="willpay" >I Promise To Pay Money:</label>
+				<input name="willpay" type="checkbox"  value={ willpay } onChange={ setWillPay} />
+			</div>
 			<button>Submit</button>
 		</form>
 	)
