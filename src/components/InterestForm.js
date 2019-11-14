@@ -4,21 +4,23 @@ function InterestForm () {
 	const [email, setEmail] = useState('');
 	const [wrong, setWrong] = useState('');
 	const [willpay, setWillPay] = useState(0);
+	const [submitted, setSubmitted] = useState(false);
 
 	function handleSubmit (e) {
 		e.preventDefault()
-		console.log(e.target)
-		var xhr = new XMLHttpRequest();
-		const data = new FormData(e.target)
-		console.log(data);
-		xhr.open('POST', '/api/create', true);
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-		xhr.onreadystatechange = function() {
-			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-				
+		if (!submitted) {
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', '/api/create', true);
+			xhr.setRequestHeader("Content-Type", "application/json")
+			xhr.onreadystatechange = function() {
+				if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+					setSubmitted(true)
+				}
 			}
+			xhr.send(JSON.stringify({"email": email,
+		                             "wrong": wrong,
+		                             "willpay": willpay}))
 		}
-		xhr.send(JSON.stringify(data))
 	}
 
 	return(
