@@ -17,6 +17,7 @@ mysql.getSession(config)
      	       .execute()
      	session.sql(createDatabase.submissions)
      	       .execute();
+     console.log(`Database created.`)
      })
 
 
@@ -36,4 +37,5 @@ app.post('/api/create', (req, res) => {
 			  });
 	         res.send('Post Successful!');
 	    });
+
 app.listen(port, () => console.log(`Express server at port ${port}!`))
