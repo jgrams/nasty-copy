@@ -22,20 +22,20 @@ mysql.getSession(config)
 
 
 app.post('/api/create', (req, res) => { 
-	console.log(req);
-			mysql
-			  .getSession(config)
-			  .then(function (session) {
-			    // Accessing an existing table
-			    myTable = session.getSchema('nastycopy').getTable('submissions');
+		console.log(req.body);
+		mysql
+		  .getSession(config)
+		  .then(function (session) {
+		    // Accessing an existing table
+		    myTable = session.getSchema('nastycopy').getTable('submissions');
 
-			    // Insert SQL Table data
-			    return myTable
-			      .insert(['email', 'grievance', 'paywilling'])
-			      .values(['Laurie', '2000-5-27', 1])
-			      .execute()
-			  });
-	         res.send('Post Successful!');
-	    });
+		    // Insert SQL Table data
+		    return myTable
+		      .insert(['email', 'grievance', 'paywilling'])
+		      .values([req.params, req.params, req.params])
+		      .execute()
+		  });
+         res.send('Post Successful!');
+    });
 
 app.listen(port, () => console.log(`Express server at port ${port}!`))
