@@ -10,8 +10,8 @@ function InterestForm () {
 		e.preventDefault()
 		if (!submitted) {
 			var xhr = new XMLHttpRequest();
-			xhr.open('POST', '/api/create', true);
-			xhr.setRequestHeader("Content-Type", "application/json")
+			xhr.open("POST", "/api/create", true);
+			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
 			xhr.onreadystatechange = function() {
 				if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
 					setSubmitted(true)
