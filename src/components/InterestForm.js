@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function InterestForm () {
 	const [email, setEmail] = useState('');
 	const [wrong, setWrong] = useState('');
-	const [willpay, setWillPay] = useState(0);
+	const [willpay, setWillPay] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
 
 	function handleSubmit (e) {
