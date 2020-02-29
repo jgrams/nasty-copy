@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2325de75.chunk.css",
+    "main.js": "/static/js/main.25aaf812.chunk.js",
+    "main.js.map": "/static/js/main.25aaf812.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.56047b30.js",
+    "runtime-main.js.map": "/static/js/runtime-main.56047b30.js.map",
+    "static/js/2.cd9d54a8.chunk.js": "/static/js/2.cd9d54a8.chunk.js",
+    "static/js/2.cd9d54a8.chunk.js.map": "/static/js/2.cd9d54a8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.5363d5b819d8d94e134f1af7a2a227dc.js": "/precache-manifest.5363d5b819d8d94e134f1af7a2a227dc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2325de75.chunk.css.map": "/static/css/main.2325de75.chunk.css.map",
+    "static/js/2.cd9d54a8.chunk.js.LICENSE.txt": "/static/js/2.cd9d54a8.chunk.js.LICENSE.txt",
+    "static/media/blue_flower.svg": "/static/media/blue_flower.5d10f6d2.svg",
+    "static/media/cactus_flower.svg": "/static/media/cactus_flower.2ec5ccec.svg",
+    "static/media/orange_flower.svg": "/static/media/orange_flower.5c6e474b.svg",
+    "static/media/pink_flower.svg": "/static/media/pink_flower.a86ac779.svg",
+    "static/media/purple_flower.svg": "/static/media/purple_flower.5d74bfb7.svg",
+    "static/media/red_flower.svg": "/static/media/red_flower.5aaf38fc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.56047b30.js",
+    "static/js/2.cd9d54a8.chunk.js",
+    "static/css/main.2325de75.chunk.css",
+    "static/js/main.25aaf812.chunk.js"
+  ]
+}
