@@ -10,6 +10,8 @@ app.use(express.static(path.join(__dirname, './build')));
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
+if ('NODE_ENV' in )
+
 var pool = mysql.createPool({
 	host     : process.env.RDS_HOSTNAME,
 	user     : process.env.RDS_USERNAME,
@@ -18,7 +20,7 @@ var pool = mysql.createPool({
 	database : process.env.RDS_DB_NAME
 })
 
-pool.query(initdb.submission, process.env.RDS_DB_NAME);
+pool.query(initdb.submissions, process.env.RDS_DB_NAME);
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, './build', 'index.html')))
 app.post('/api/create', (req, res, next) => { 
