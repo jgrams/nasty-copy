@@ -5,7 +5,7 @@ const mysql = require('mysql')
 const app = express()
 const port = process.env.Port || 8080
 
-app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, './build')));
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 var pool = mysql.createPool({
@@ -16,7 +16,7 @@ var pool = mysql.createPool({
 	database : process.env.RDS_DB_NAME
 })
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build', 'index.html')))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './build', 'index.html')))
 app.post('/api/create', (req, res, next) => { 
 		var values = {email: req.body.email, 
 		              wrong: req.body.wrong,
