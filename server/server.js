@@ -22,7 +22,7 @@ app.post('/api/create', (req, res, next) => {
 		              wrong: req.body.wrong,
 		              willpay: req.body.willpay};
 		// mysql library escapes when passed in as parameter                
-	  	pool.query('INSERT INTO submission SET ?', 
+	  	pool.query('INSERT INTO submissions SET ?', 
 	  		       values, 
 	  		       function (error, results, fields) {
 	  		           if (error) {
