@@ -10,8 +10,6 @@ app.use(express.static(path.join(__dirname, './build')));
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
-if ('NODE_ENV' in )
-
 var pool = mysql.createPool({
 	host     : process.env.RDS_HOSTNAME,
 	user     : process.env.RDS_USERNAME,
