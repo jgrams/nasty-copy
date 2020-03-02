@@ -1,7 +1,7 @@
-//not in use currently
-
 {
   "host": "localhost",
   "user": "root",
-  "password": "Don'tEverBeTooMean"
+  "password": "Don'tEverBeTooMean",
+  "database" : "nastycopy",
+  "port" : "3306"
 }
