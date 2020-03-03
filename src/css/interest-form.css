@@ -12,4 +12,5 @@
 
 .interest-form {
 	grid-template-columns: auto auto;
+	grid-gap: .25vw;
 }

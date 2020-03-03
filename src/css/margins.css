@@ -1,3 +1,13 @@
 .m1 {
 	margin: 1em;
 }
+
+.bottom-margin {
+	margin-bottom: 3vh;
+	margin-left: 4vw;
+	margin-right: 2vw;
+}
+
+.top-margin {
+	margin-top: 1vw;
+}

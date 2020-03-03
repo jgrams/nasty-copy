@@ -1,6 +1,6 @@
 .flowers-container{
   overflow: hidden;
-  padding: .5em 0 .5em 0;
+  padding: .5vh 0 .5vh 0;
 }
 
 @keyframes wiggle {

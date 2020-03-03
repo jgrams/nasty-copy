@@ -3,7 +3,7 @@ import React from 'react';
 class Card extends React.Component {
 	render() {
 		return(
-				<div className="card column align-center">
+				<div className="card column margin-top align-center">
 					<div className={this.props.color + " card-header"} alt="Square Button">
 						<div className="card-header-text tall-line">
 							{this.props.headerText}

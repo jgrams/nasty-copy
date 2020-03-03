@@ -1,0 +1,23 @@
+.card-header-text {
+  color: rgb(242, 243, 242);
+  font-weight: 600;
+  line-height: 2;
+}
+
+.card-text-header{
+  font-size: calc(5px + 3vmin);
+  margin-top: 4px;
+}
+
+.card-text-body{
+  font-size: 3vmin;
+}
+
+.tall-line{
+  line-height: 2.3;
+}
+
+.card-button-text {
+  font-size: calc(7px + 2vmin);
+  font-weight: 12;
+}

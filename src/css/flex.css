@@ -1,9 +1,14 @@
 div .row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 div .column {
+  display: flex;
+  flex-direction: column;
+}
+
+div .switch {
   display: flex;
   flex-direction: column;
 }
@@ -12,13 +17,10 @@ div .align-center {
   align-items: center;
 }
 
-div .justify-center {
-  justify-content: center;
+div .align-left {
+  align-items: start;
 }
 
-@media only screen and (min-width: 768px) {
-  /* Make rows when on a screen: */
-  div .row {
-    flex-direction: row;
-  }
+div .justify-center {
+  justify-content: center;
 }

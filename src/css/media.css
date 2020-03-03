@@ -1,0 +1,15 @@
+@media only screen and (min-width: 768px) {
+  /* Make rows when on a screen: */
+  div .switch {
+    flex-direction: row;
+  }
+  
+  .card {
+  	min-width: 26%;
+  }
+
+  .card-margin {
+  	margin-left: .5vh;
+  	margin-right: .5vh;
+  }
+}

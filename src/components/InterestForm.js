@@ -24,7 +24,7 @@ function InterestForm () {
 	}
 
 	return(
-		<form onSubmit={handleSubmit} className="interest-form grid">
+		<form onSubmit={handleSubmit} className="interest-form grid margin-top">
 			<label className="email-label" htmlFor="email">Your Email:</label>
 			<input className="email-form" name="email" type="email" value={ email } onChange={ e => (setEmail(e.target.value)) } />
 			<label htmlFor="wrong">What's Wrong:</label>
