@@ -3,11 +3,16 @@
 }
 
 .bottom-margin {
-	margin-bottom: 3vh;
-	margin-left: 4vw;
-	margin-right: 2vw;
+	margin: auto;
+	margin-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
-.top-margin {
+.margin-top {
+	margin-top: 2vw;
+}
+
+.card-margin {
 	margin-top: 1vw;
 }
