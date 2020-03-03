@@ -30,7 +30,7 @@ class Flower extends React.Component {
 		}
 		var flower = flowers[getRandomFlowerIndex()];
 		return(
-			<img className="flower-image shrink" src={flower.src} alt={flower.altText}/>
+			<img className="flower-image" src={flower.src} alt={flower.altText}/>
 		)
 	}
 }

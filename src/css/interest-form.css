@@ -1,7 +1,11 @@
-button .gate {
-
-}
-
 .gateholder {
 	max-width: 35vw;
+}
+
+.personal-text {
+	line-height: 1.2;
+}
+
+.text-left {
+	text-align: left;
 }
