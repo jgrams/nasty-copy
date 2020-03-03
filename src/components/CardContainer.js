@@ -53,7 +53,7 @@ function CardContainer() {
     };
 
 	return(
-		<div className="cards-container row justify-center">
+		<div className="cards-container row justify-center align-center">
 			{cards[displayedCardIndex].map((value, index) => {
 				return <Card key={index} 
 				             color={value.color} 

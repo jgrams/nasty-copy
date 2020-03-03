@@ -12,7 +12,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App grid">
+    <div className="App grid body-grid">
     	<Header />
         <CardContainer />
         <FlowerBar />

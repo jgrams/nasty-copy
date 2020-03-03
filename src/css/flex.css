@@ -1,6 +1,6 @@
 div .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 div .column {
@@ -14,4 +14,11 @@ div .align-center {
 
 div .justify-center {
   justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Make rows when on a screen: */
+  div .row {
+    flex-direction: row;
+  }
 }

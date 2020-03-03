@@ -1,7 +1,7 @@
 import React from 'react';
 import Flower from './Flower'
 
-class FlowerContainer extends React.Component {
+class FlowerBar extends React.Component {
 	render() {
 		const numberFlowers = 7;
 		var displayFlowers = [];
@@ -10,11 +10,11 @@ class FlowerContainer extends React.Component {
 		}
 
 		return(
-			<div className="flowers-container row align-center" >
+			<div className="flowers-container row align-center justify-center" >
 			    {displayFlowers}
 			</div>
 		)
 	};
 }
 
-export default FlowerContainer;
+export default FlowerBar;
