@@ -1,5 +1,6 @@
 div .row {
   display: flex;
+  flex-direction: row;
 }
 
 div .column {
@@ -8,13 +9,9 @@ div .column {
 }
 
 div .align-center {
-  align-items: center;	
+  align-items: center;
 }
 
 div .justify-center {
   justify-content: center;
-}
-
-.shrink {
-  flex: 1;
 }

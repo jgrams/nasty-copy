@@ -37,7 +37,7 @@ function InterestForm () {
 				<label htmlFor="willpay" >I Promise To Pay Money:</label>
 				<input name="willpay" type="checkbox"  value={ willpay } onChange={ e => (setWillPay(e.target.checked)) } />
 			</div>
-			<button>Submit</button>
+			<button className="card-header">Submit</button>
 		</form>
 	)
 }

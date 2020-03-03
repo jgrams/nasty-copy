@@ -8,18 +8,18 @@ class Card extends React.Component {
 						<div className="card-header-text tall-line">
 							{this.props.headerText}
 						</div>
-					</div>
-					<div className='card-text-header'>
-						{this.props.bodyHeader}
-					</div>
-					<div className='card-text-body'>
-						{this.props.bodyText}
-					</div>
-					<button className='card-button' onClick={this.props.onClick}>
-						<div className={'card-button-text tall-line ' + this.props.color + '-text'}>
-							{this.props.buttonText}
 						</div>
-					</button>
+						<div className='card-text-header'>
+							{this.props.bodyHeader}
+						</div>
+						<div className='card-text-body'>
+							{this.props.bodyText}
+						</div>
+						<button className='card-button' onClick={this.props.onClick}>
+							<div className={'card-button-text tall-line ' + this.props.color + '-text'}>
+								{this.props.buttonText}
+							</div>
+						</button>
 				</div>
 		)
 	}
