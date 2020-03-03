@@ -7,10 +7,12 @@ import './css/flex.css'
 import RegisterInterest from './components/RegisterInterest';
 import InteractivePanel from './components/InteractivePanel';
 import FlowerBar from './components/FlowerBar';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
+    	<Header />
         <InteractivePanel />
         <FlowerBar />
         <RegisterInterest />

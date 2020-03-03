@@ -4,9 +4,7 @@ import CardContainer from './CardContainer';
 class InteractivePanel extends React.Component {
 	render() {
 		return(
-			<div className='interactive-panel column'>
-				<h1>Welcome.</h1> 
-				<h3>Has someone been mean to you?</h3>
+			<div className='interactive-panel'>
 				<CardContainer />
 			</div>
 		)
