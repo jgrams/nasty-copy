@@ -10,7 +10,7 @@ import FlowerBar from './components/FlowerBar';
 
 function App() {
   return (
-    <div className="App column">
+    <div className="App">
         <InteractivePanel />
         <FlowerBar />
         <RegisterInterest />

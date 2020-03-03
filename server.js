@@ -18,6 +18,7 @@ if ('RDS_DB_NAME' in process.env === false) {
 	process.env.RDS_PASSWORD = db_config.password
 	process.env.RDS_PORT = db_config.port
 	process.env.RDS_DB_NAME = db_config.database
+	process.env.NODE_ENV = "development"
 }
 
 // connect to db
@@ -30,9 +31,9 @@ var pool = mysql.createPool({
 })
 
 //ensure tables all exist
-pool.query(create_database.submissions), function (error, results, fields) {
-	if (error) throw error;
-};
+pool.query(create_database.submissions, function (error, results, fields) {
+	if (error) throw error
+});
 
 // specify request responses
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, './build', 'index.html')))
@@ -53,5 +54,4 @@ app.post('/api/create', (req, res, next) => {
 	  	           }
 	  	)
 })
-
 app.listen(port, () => console.log(`Express server at port ${port}!`))
