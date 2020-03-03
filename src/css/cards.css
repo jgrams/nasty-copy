@@ -35,12 +35,12 @@
 }
 
 .card-text-header{
-  font-size: calc(5px + 2vmin);
+  font-size: calc(5px + 3vmin);
   margin-top: 4px;
 }
 
 .card-text-body{
-  font-size: 2vmin;
+  font-size: 3vmin;
 }
 
 .tall-line{

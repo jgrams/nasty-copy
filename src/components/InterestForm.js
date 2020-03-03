@@ -24,20 +24,14 @@ function InterestForm () {
 	}
 
 	return(
-		<form onSubmit={handleSubmit} className="interest-form column align-center">
-			<div className="row">
-				<label htmlFor="email">Your Email:</label>
-				<input name="email" type="email" value={ email } onChange={ e => (setEmail(e.target.value)) } />
-			</div>
-			<div className="row">
-				<label htmlFor="wrong">What's Wrong:</label>
-				<input name="wrong" type="text" value={ wrong } onChange={ e => (setWrong(e.target.value)) } />
-			</div>
-			<div className="row">
-				<label htmlFor="willpay" >I Promise To Pay Money:</label>
-				<input name="willpay" type="checkbox"  value={ willpay } onChange={ e => (setWillPay(e.target.checked)) } />
-			</div>
-			<button className="card-header">Submit</button>
+		<form onSubmit={handleSubmit} className="interest-form grid">
+			<label className="email-label" htmlFor="email">Your Email:</label>
+			<input className="email-form" name="email" type="email" value={ email } onChange={ e => (setEmail(e.target.value)) } />
+			<label htmlFor="wrong">What's Wrong:</label>
+			<textarea name="wrong" type="text" value={ wrong } onChange={ e => (setWrong(e.target.value)) } />
+			<label htmlFor="willpay" >I Promise To Consider Paying Money:</label>
+			<input name="willpay" type="checkbox"  value={ willpay } onChange={ e => (setWillPay(e.target.checked)) } />
+			<button>Submit</button>
 		</form>
 	)
 }

@@ -9,3 +9,17 @@
 .text-left {
 	text-align: left;
 }
+
+.interest-form {
+	grid-template-columns: auto auto auto auto auto;
+}
+
+.email-label {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.email-form {
+	grid-column-start: 4;
+	grid-column-end: 5
+}
