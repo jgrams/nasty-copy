@@ -9,7 +9,12 @@
   }
 
   .card-margin {
-  	margin-left: .5vh;
-  	margin-right: .5vh;
+  	margin-left: 1vh;
+  	margin-right: 1vh;
+    margin-top: 0;
+  }
+
+  .interest-form {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

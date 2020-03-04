@@ -13,6 +13,11 @@ div .switch {
   flex-direction: column;
 }
 
+div .center {
+  align-items: center;
+  justify-content: center;
+}
+
 div .align-center {
   align-items: center;
 }

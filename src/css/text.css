@@ -1,7 +1,6 @@
 .card-header-text {
   color: rgb(242, 243, 242);
-  font-weight: 600;
-  line-height: 2;
+  font-weight: 700;
 }
 
 .card-text-header{
@@ -10,7 +9,8 @@
 }
 
 .card-text-body{
-  font-size: 3vmin;
+  font-size: calc(12px + 2vmin);
+  font-weight: 360;
 }
 
 .tall-line{
@@ -19,5 +19,5 @@
 
 .card-button-text {
   font-size: calc(7px + 2vmin);
-  font-weight: 12;
+  font-weight: 240;
 }

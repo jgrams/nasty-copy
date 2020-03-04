@@ -10,7 +10,7 @@ class FlowerBar extends React.Component {
 		}
 
 		return(
-			<div className="flowers-container row align-center justify-center" >
+			<div style={{ gridTemplateColumns: "repeat(" + numberFlowers.toString() + ", 1fr)" }} className="flowers-container grid center " >
 			    {displayFlowers}
 			</div>
 		)
