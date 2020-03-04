@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card'
+import Flower from './Flower'
 
 function CardContainer() {
 	const cards = {0: [{color: 'green',
@@ -7,18 +8,18 @@ function CardContainer() {
 	                    bodyHeader: 'It was',
 	                    bodyText: 'infuriating.',
 	                    buttonText: 'Yes.',
-	                    targetCards : 1}, 
+	                    targetCards : 3}, 
 	                   {color: 'teal',
 	                    headerText: 'Many times',
 	                    bodyHeader: 'I know',
 	                    bodyText: 'the patience of',
 	                    buttonText: 'Revenge.',
-	                    targetCards : 3}, 
+	                    targetCards : 2}, 
 	                   {color: 'blue',
 	                    headerText: 'No',
 	                    bodyHeader: 'But,',
 	                    bodyText: 'somehow.',
-	                    buttonText: "I'm grumpy",
+	                    buttonText: "I'm Grumpy.",
 	                    targetCards : 2}],
 	               1: [returnForgivenessCard(), 
 	                   {color: 'teal',
@@ -50,6 +51,10 @@ function CardContainer() {
                 bodyText: 'will be',
                 buttonText: 'Best.',
                 targetCards : 0};
+    };
+
+    function flower() {
+    	return <Flower />
     };
 
 	return(

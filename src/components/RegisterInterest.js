@@ -10,7 +10,7 @@ function RegisterInterest() {
 			<div className='column text-left'>
 				<h3>I want to humiliate my enemies.</h3>
 				<div className="card-text-body">
-				    I want help, and I'm willing to share personal information.
+				    I want to tell someone about it.
 				</div>
 				{interest_level[0]}
 			</div>

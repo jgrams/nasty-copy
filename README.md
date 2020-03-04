@@ -1,5 +1,7 @@
 React front end served by an Express server. Here to help.
 
+Install npm and run npm install in this directory to get set up.
+
 ## Available Scripts
 
 In the project directory, you can run:
