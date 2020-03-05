@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
+//import EmailField from './EmailField'
+import Checkbox from './Checkbox'
+import EmailLabel from './EmailLabel'
+import EmailField from './EmailField'
+
 
 function InterestForm () {
 	const [email, setEmail] = useState('');
 	const [wrong, setWrong] = useState('');
-	const [willpay, setWillPay] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
+	const [shareEmail, setShareEmail] = useState(false);
 
 	function handleSubmit (e) {
 		e.preventDefault()
@@ -24,15 +29,22 @@ function InterestForm () {
 	}
 
 	return(
-		<form onSubmit={handleSubmit} className="interest-form grid margin-top">
-			<label className="email-label" htmlFor="email">Your Email:</label>
-			<input className="email-form" name="email" type="email" value={ email } onChange={ e => (setEmail(e.target.value)) } />
-			<label htmlFor="wrong">What's Wrong:</label>
-			<textarea name="wrong" type="text" value={ wrong } onChange={ e => (setWrong(e.target.value)) } />
-			<label htmlFor="willpay" >I Promise To Consider Paying Money:</label>
-			<input name="willpay" type="checkbox"  value={ willpay } onChange={ e => (setWillPay(e.target.checked)) } />
-			<button>Submit</button>
-		</form>
+		<div className='column text-left'>
+			<h3>I've thought about humiliating my enemies.</h3>
+			<div className="card-text-body">
+			    I want to tell someone about it.
+			</div>
+			<form onSubmit={handleSubmit} className="interest-form grid margin-top">
+				<label htmlFor="wrong">What's Wrong:</label>
+				<textarea name="wrong" type="text" value={ wrong } onChange={ e => (setWrong(e.target.value)) } />
+				<EmailLabel share={shareEmail} />
+				<EmailField share={shareEmail} 
+							email = {email}
+				            shareEmail = { () => setShareEmail() }
+				            setEmail = { () => setEMail() } />
+				<button>Submit</button>
+			</form>
+		</div>
 	)
 }
 
