@@ -1,7 +1,0 @@
-{
-  "host": "localhost",
-  "user": "root",
-  "password": "Don'tEverBeTooMean",
-  "database" : "nastycopy",
-  "port" : "3306"
-}
