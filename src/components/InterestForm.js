@@ -11,17 +11,13 @@ function InterestForm (props) {
 
 	function handleSubmit (e) {
 		e.preventDefault()
-		if (!submitted && submitted) {
+		if (!submitted) {
 			var xhr = new XMLHttpRequest();
 			xhr.open("POST", "/api/create", true);
 			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
-			xhr.onreadystatechange = function() {
-				if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-					setSubmitted(true)
-				}
-			}
 			xhr.send(JSON.stringify({"email": email,
 		                             "wrong": wrong}))
+			setSubmitted(true)
 		}
 	}
 
@@ -40,7 +36,7 @@ function InterestForm (props) {
 				            setShareEmail = { () => setShareEmail() }
 				            setEmail = { () => setEmail() } />
 				<button onClick={ () => props.setIsVisible(false) }>I'm not interested</button>
-				<button>Submit</button>
+				<button className={`${submitted ? 'fade' : ''}`} >Submit</button>
 			</form>
 		</div>
 	)
