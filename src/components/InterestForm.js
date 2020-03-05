@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-//import EmailField from './EmailField'
-import Checkbox from './Checkbox'
 import EmailLabel from './EmailLabel'
 import EmailField from './EmailField'
 
 
-function InterestForm () {
+function InterestForm (props) {
 	const [email, setEmail] = useState('');
 	const [wrong, setWrong] = useState('');
 	const [submitted, setSubmitted] = useState(false);
@@ -13,7 +11,7 @@ function InterestForm () {
 
 	function handleSubmit (e) {
 		e.preventDefault()
-		if (!submitted) {
+		if (!submitted && submitted) {
 			var xhr = new XMLHttpRequest();
 			xhr.open("POST", "/api/create", true);
 			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
@@ -28,7 +26,7 @@ function InterestForm () {
 	}
 
 	return(
-		<div className='column text-left'>
+		<div className={ 'column text-left'}>
 			<h3>I've thought about humiliating my enemies.</h3>
 			<div className="card-text-body">
 			    I want to tell someone about it.
@@ -41,6 +39,7 @@ function InterestForm () {
 							email = {email}
 				            setShareEmail = { () => setShareEmail() }
 				            setEmail = { () => setEmail() } />
+				<button onClick={ () => props.setIsVisible(false) }>I'm not interested</button>
 				<button>Submit</button>
 			</form>
 		</div>
