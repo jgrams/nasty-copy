@@ -23,8 +23,7 @@ function InterestForm () {
 				}
 			}
 			xhr.send(JSON.stringify({"email": email,
-		                             "wrong": wrong,
-		                             "willpay": willpay}))
+		                             "wrong": wrong}))
 		}
 	}
 
@@ -37,11 +36,11 @@ function InterestForm () {
 			<form onSubmit={handleSubmit} className="interest-form grid margin-top">
 				<label htmlFor="wrong">What's Wrong:</label>
 				<textarea name="wrong" type="text" value={ wrong } onChange={ e => (setWrong(e.target.value)) } />
-				<EmailLabel share={shareEmail} />
-				<EmailField share={shareEmail} 
+				<EmailLabel shareEmail={shareEmail} />
+				<EmailField shareEmail={shareEmail} 
 							email = {email}
-				            shareEmail = { () => setShareEmail() }
-				            setEmail = { () => setEMail() } />
+				            setShareEmail = { () => setShareEmail() }
+				            setEmail = { () => setEmail() } />
 				<button>Submit</button>
 			</form>
 		</div>
