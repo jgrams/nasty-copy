@@ -35,8 +35,8 @@ function InterestForm (props) {
 							email = {email}
 				            setShareEmail = { () => setShareEmail() }
 				            setEmail = { () => setEmail() } />
-				<button onClick={ () => props.setIsVisible(false) }>I'm not interested</button>
-				<button className={`${submitted ? 'fade' : ''}`} >Submit</button>
+				<button className={`mid-line`} onClick={ () => props.setIsVisible(false) }>I'm not interested</button>
+				<button className={ `mid-line ${submitted ? ' fade' : ''}`} >Submit</button>
 			</form>
 		</div>
 	)

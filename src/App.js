@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import './css/flowers.css'
+import './css/images.css'
 import './css/cards.css'
 import './css/interest-form.css'
 import './css/flex.css'
